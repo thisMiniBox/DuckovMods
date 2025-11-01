@@ -83,16 +83,22 @@ namespace HideCharacter
             rendererList.Clear();
             var obj = GameObject.Find("ModelRoot");
             if (!obj) return;
+            //角色的模型是最先加载的，就直接先查找了，避免找到其他实体的身体
             bodyPartObject = GameObject.Find("Pelvis");
-            healthBar=GameObject.Find("HealthBars");
+            healthBar = GameObject.Find("HealthBars");
             needRefresh = true;
-            //防止无法正常恢复身体
+            //身体的SkinnedMeshRenderer如果不隐藏会发现身体无法恢复
             foreach (var skinnedMeshRenderer in obj.GetComponentsInChildren<SkinnedMeshRenderer>())
             {
                 rendererList.Add(skinnedMeshRenderer);
             }
         }
 
+        /// <summary>
+        /// 查找身体部件，不使用对Meshderer的隐藏是因为测试的时候发现没有正确隐藏，
+        /// 可能是测试逻辑错了，就先这样写了
+        /// </summary>
+        /// <param name="parentTransform"></param>
         void FindChildObjectsRecursively(Transform parentTransform)
         {
             foreach (Transform child in parentTransform)
@@ -157,6 +163,7 @@ namespace HideCharacter
         {
             if (hideList != null)
             {
+                //使用懒刷新是因为发现在开始查找的时候会找不到眼睛和眉毛，可能是还没有创建，就改为在切换时刷新了
                 if (needRefresh)
                 {
                     if (bodyPartObject != null)
