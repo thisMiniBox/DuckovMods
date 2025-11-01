@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SceneSnapshot", "SceneSnaps
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HideCharacter", "HideCharacter\HideCharacter.csproj", "{809F6CA1-E757-46CD-B8AB-89522D166140}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HitFeedback", "HitFeedback\HitFeedback.csproj", "{FEA30679-27B6-4413-91A5-EB08FCD9F02B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{809F6CA1-E757-46CD-B8AB-89522D166140}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{809F6CA1-E757-46CD-B8AB-89522D166140}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{809F6CA1-E757-46CD-B8AB-89522D166140}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEA30679-27B6-4413-91A5-EB08FCD9F02B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEA30679-27B6-4413-91A5-EB08FCD9F02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEA30679-27B6-4413-91A5-EB08FCD9F02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEA30679-27B6-4413-91A5-EB08FCD9F02B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

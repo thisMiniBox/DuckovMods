@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\vs_project\\DuckovMods\\HideCharacter\\HideCharacter.csproj": {}
+    "D:\\vs_project\\DuckovMods\\HitFeedback\\HitFeedback.csproj": {}
   },
   "projects": {
-    "D:\\vs_project\\DuckovMods\\HideCharacter\\HideCharacter.csproj": {
-      "version": "1.0.1",
+    "D:\\vs_project\\DuckovMods\\HitFeedback\\HitFeedback.csproj": {
+      "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\vs_project\\DuckovMods\\HideCharacter\\HideCharacter.csproj",
-        "projectName": "HideCharacter",
-        "projectPath": "D:\\vs_project\\DuckovMods\\HideCharacter\\HideCharacter.csproj",
+        "projectUniqueName": "D:\\vs_project\\DuckovMods\\HitFeedback\\HitFeedback.csproj",
+        "projectName": "HitFeedback",
+        "projectPath": "D:\\vs_project\\DuckovMods\\HitFeedback\\HitFeedback.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\vs_project\\DuckovMods\\HideCharacter\\obj\\",
+        "outputPath": "D:\\vs_project\\DuckovMods\\HitFeedback\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\vsShare\\NuGetPackages"
@@ -49,16 +49,6 @@
       "frameworks": {
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
-          "dependencies": {
-            "Lib.Harmony": {
-              "target": "Package",
-              "version": "[2.4.1, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.4, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

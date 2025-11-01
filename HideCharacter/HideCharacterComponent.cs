@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using Duckov.Utilities;
 using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,9 +13,10 @@ namespace HideCharacter
     public class HideCharacterComponent : MonoBehaviour
     {
         public HideList? hideList = new HideList();
-        private bool hide = false;
+        public bool hide { get; private set; } = false;
         private List<Renderer> rendererList = new  List<Renderer>();
         private bool needRefresh = true;
+
         private GameObject?
             bodyPartObject,
             tail,
@@ -27,11 +29,18 @@ namespace HideCharacter
             thighLeft,
             thighRight,
             weapon,
-            healthBar;
+            healthBar,
+            helmet,
+            headTip,
+            glasses,
+            armor,
+            backpack;
 
         private void OnEnable()
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
+            
+            
             var dllDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             var configFilePath = Path.Combine(dllDirectory, "config.json");
             if (File.Exists(configFilePath))
@@ -129,6 +138,21 @@ namespace HideCharacter
                     case "RightHandSocket":
                         weapon = child.gameObject;
                         break;
+                    case "HelmatSocket":
+                        helmet= child.gameObject;
+                        break;
+                    case "FaceMaskSocket":
+                        glasses = child.gameObject;
+                        break;
+                    case "HeadTip":
+                        headTip= child.gameObject;
+                        break;
+                    case "ArmorSocket":
+                        armor= child.gameObject;
+                        break;
+                    case "BackpackSocket":
+                        backpack= child.gameObject;
+                        break;
                     default:
                         if (child.gameObject.name.Contains("EyePart"))
                         {
@@ -159,7 +183,7 @@ namespace HideCharacter
             }
         }
 
-        private void SetCharacterHide(bool hide)
+        public void SetCharacterHide(bool hide)
         {
             if (hideList != null)
             {
@@ -181,8 +205,12 @@ namespace HideCharacter
                 thighRight?.SetActive(!(hide && hideList.hideThighRight));
                 weapon?.SetActive(!(hide && hideList.hideWeapon));
                 healthBar?.SetActive(!(hide && hideList.hideHealthBar));
-
-    
+                helmet?.SetActive(!(hide && hideList.hideHelmet));
+                glasses?.SetActive(!(hide && hideList.hideGlasses));
+                headTip?.SetActive(!(hide && hideList.hideHeadTip));
+                
+                armor?.SetActive(!(hide && hideList.hideArmor));
+                backpack?.SetActive(!(hide && hideList.hideBackpack));
             }
 
             foreach (var o in rendererList)

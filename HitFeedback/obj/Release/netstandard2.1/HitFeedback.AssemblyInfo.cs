@@ -10,13 +10,13 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("折纸的小箱子")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("HitFeedback")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.1")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.1+5cec8711ddabae774b7b55087269b881165af0e7")]
-[assembly: System.Reflection.AssemblyProductAttribute("HideCharacter")]
-[assembly: System.Reflection.AssemblyTitleAttribute("HideCharacter")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.1")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5cec8711ddabae774b7b55087269b881165af0e7")]
+[assembly: System.Reflection.AssemblyProductAttribute("HitFeedback")]
+[assembly: System.Reflection.AssemblyTitleAttribute("HitFeedback")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。
 
