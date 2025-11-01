@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("折纸的小箱子")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+997656613e0fbe2d5c91ade63b444626bd3b2118")]
 [assembly: System.Reflection.AssemblyProductAttribute("SceneSnapshot")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SceneSnapshot")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0")]

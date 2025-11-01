@@ -212,11 +212,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\vs_project\\ThirdPersonCamera\\HideCharacter\\HideCharacter.csproj",
+      "projectUniqueName": "D:\\vs_project\\DuckovMods\\HideCharacter\\HideCharacter.csproj",
       "projectName": "HideCharacter",
-      "projectPath": "D:\\vs_project\\ThirdPersonCamera\\HideCharacter\\HideCharacter.csproj",
+      "projectPath": "D:\\vs_project\\DuckovMods\\HideCharacter\\HideCharacter.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\vs_project\\ThirdPersonCamera\\HideCharacter\\obj\\",
+      "outputPath": "D:\\vs_project\\DuckovMods\\HideCharacter\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\vsShare\\NuGetPackages"

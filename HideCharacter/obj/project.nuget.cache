@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0fgzUvttKoU=",
+  "dgSpecHash": "BwbcECPUZ84=",
   "success": true,
-  "projectFilePath": "D:\\vs_project\\ThirdPersonCamera\\HideCharacter\\HideCharacter.csproj",
+  "projectFilePath": "D:\\vs_project\\DuckovMods\\HideCharacter\\HideCharacter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\lib.harmony\\2.4.1\\lib.harmony.2.4.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\lib.harmony.ref\\2.4.1\\lib.harmony.ref.2.4.1.nupkg.sha512",

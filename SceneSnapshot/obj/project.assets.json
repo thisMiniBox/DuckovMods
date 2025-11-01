@@ -168,11 +168,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\vs_project\\ThirdPersonCamera\\SceneSnapshot\\SceneSnapshot.csproj",
+      "projectUniqueName": "D:\\vs_project\\DuckovMods\\SceneSnapshot\\SceneSnapshot.csproj",
       "projectName": "SceneSnapshot",
-      "projectPath": "D:\\vs_project\\ThirdPersonCamera\\SceneSnapshot\\SceneSnapshot.csproj",
+      "projectPath": "D:\\vs_project\\DuckovMods\\SceneSnapshot\\SceneSnapshot.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\vs_project\\ThirdPersonCamera\\SceneSnapshot\\obj\\",
+      "outputPath": "D:\\vs_project\\DuckovMods\\SceneSnapshot\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\vsShare\\NuGetPackages"
