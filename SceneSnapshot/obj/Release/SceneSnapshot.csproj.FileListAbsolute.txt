@@ -1,0 +1,10 @@
+D:\vs_project\ThirdPersonCamera\SceneSnapshot\bin\Release\SceneSnapshot.deps.json
+D:\vs_project\ThirdPersonCamera\SceneSnapshot\bin\Release\SceneSnapshot.dll
+D:\vs_project\ThirdPersonCamera\SceneSnapshot\bin\Release\SceneSnapshot.pdb
+D:\vs_project\ThirdPersonCamera\SceneSnapshot\obj\Release\SceneSnapshot.csproj.AssemblyReference.cache
+D:\vs_project\ThirdPersonCamera\SceneSnapshot\obj\Release\SceneSnapshot.GeneratedMSBuildEditorConfig.editorconfig
+D:\vs_project\ThirdPersonCamera\SceneSnapshot\obj\Release\SceneSnapshot.AssemblyInfoInputs.cache
+D:\vs_project\ThirdPersonCamera\SceneSnapshot\obj\Release\SceneSnapshot.AssemblyInfo.cs
+D:\vs_project\ThirdPersonCamera\SceneSnapshot\obj\Release\SceneSnapshot.csproj.CoreCompileInputs.cache
+D:\vs_project\ThirdPersonCamera\SceneSnapshot\obj\Release\SceneSnapshot.dll
+D:\vs_project\ThirdPersonCamera\SceneSnapshot\obj\Release\SceneSnapshot.pdb

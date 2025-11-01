@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<Nullable>enable</Nullable>
+		<DuckovPath>D:\steam\steamapps\common\Escape from Duckov</DuckovPath>
+		<FileVersion>1.0.0</FileVersion>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+		<Authors>折纸的小箱子</Authors>
+		<AssemblyVersion>1.0.0</AssemblyVersion>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<Reference Include="$(DuckovPath)\Duckov_Data\Managed\TeamSoda.*">
+			<Private>False</Private>
+			<SpecificVersion>False</SpecificVersion>
+		</Reference>
+		<Reference Include="$(DuckovPath)\Duckov_Data\Managed\ItemStatsSystem.dll">
+			<Private>False</Private>
+			<SpecificVersion>False</SpecificVersion>
+		</Reference>
+		<Reference Include="Cinemachine">
+		  <HintPath>..\..\..\steam\steamapps\common\Escape from Duckov\Duckov_Data\Managed\Cinemachine.dll</HintPath>
+			<Private>False</Private>
+			<SpecificVersion>False</SpecificVersion>
+		</Reference>
+		<Reference Include="FMODUnity">
+			<HintPath>..\..\..\..\steam\steamapps\common\Escape from Duckov\Duckov_Data\Managed\FMODUnity.dll</HintPath>
+			<Private>False</Private>
+			<SpecificVersion>False</SpecificVersion>
+		</Reference>
+		<Reference Include="$(DuckovPath)\Duckov_Data\Managed\Unity*">
+			<Private>False</Private>
+			<SpecificVersion>False</SpecificVersion>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Lib.Harmony" Version="2.4.1">
+			<PrivateAssets>none</PrivateAssets>
+			<IncludeAssets>all</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Remove="PatchGameCameraStart.cs" />
+	  <Compile Remove="PatchGameCameraUpdatePosition.cs" />
+	</ItemGroup>
+
+</Project>

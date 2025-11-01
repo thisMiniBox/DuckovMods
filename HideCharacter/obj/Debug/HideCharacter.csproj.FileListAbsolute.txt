@@ -1,0 +1,12 @@
+D:\vs_project\ThirdPersonCamera\HideCharacter\bin\Debug\HideCharacter.deps.json
+D:\vs_project\ThirdPersonCamera\HideCharacter\bin\Debug\HideCharacter.dll
+D:\vs_project\ThirdPersonCamera\HideCharacter\bin\Debug\HideCharacter.pdb
+D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Debug\HideCharacter.csproj.AssemblyReference.cache
+D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Debug\HideCharacter.GeneratedMSBuildEditorConfig.editorconfig
+D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Debug\HideCharacter.AssemblyInfoInputs.cache
+D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Debug\HideCharacter.AssemblyInfo.cs
+D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Debug\HideCharacter.csproj.CoreCompileInputs.cache
+D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Debug\HideCharacter.dll
+D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Debug\refint\HideCharacter.dll
+D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Debug\HideCharacter.pdb
+D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Debug\ref\HideCharacter.dll

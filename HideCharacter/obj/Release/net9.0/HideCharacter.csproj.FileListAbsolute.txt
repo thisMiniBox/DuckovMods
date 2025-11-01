@@ -1,0 +1,15 @@
+D:\vs_project\ThirdPersonCamera\HideCharacter\bin\Release\net9.0\HideCharacter.deps.json
+D:\vs_project\ThirdPersonCamera\HideCharacter\bin\Release\net9.0\HideCharacter.dll
+D:\vs_project\ThirdPersonCamera\HideCharacter\bin\Release\net9.0\HideCharacter.pdb
+D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Release\net9.0\HideCharacter.csproj.AssemblyReference.cache
+D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Release\net9.0\HideCharacter.GeneratedMSBuildEditorConfig.editorconfig
+D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Release\net9.0\HideCharacter.AssemblyInfoInputs.cache
+D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Release\net9.0\HideCharacter.AssemblyInfo.cs
+D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Release\net9.0\HideCharacter.csproj.CoreCompileInputs.cache
+D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Release\net9.0\HideCharacter.dll
+D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Release\net9.0\refint\HideCharacter.dll
+D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Release\net9.0\HideCharacter.pdb
+D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Release\net9.0\ref\HideCharacter.dll
+D:\steam\steamapps\common\Escape from Duckov\Duckov_Data\Mods\HideCharacter\net9.0\HideCharacter.deps.json
+D:\steam\steamapps\common\Escape from Duckov\Duckov_Data\Mods\HideCharacter\net9.0\HideCharacter.dll
+D:\steam\steamapps\common\Escape from Duckov\Duckov_Data\Mods\HideCharacter\net9.0\HideCharacter.pdb
