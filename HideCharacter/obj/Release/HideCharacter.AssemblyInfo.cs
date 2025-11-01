@@ -12,11 +12,11 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("折纸的小箱子")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.1+4f144bef9a53a82ec1d3853545c53fd70357c810")]
 [assembly: System.Reflection.AssemblyProductAttribute("HideCharacter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HideCharacter")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.0.1")]
 
 // 由 MSBuild WriteCodeFragment 类生成。
 

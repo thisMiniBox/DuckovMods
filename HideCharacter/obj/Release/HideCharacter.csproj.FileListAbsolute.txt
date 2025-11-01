@@ -1,4 +1,3 @@
-D:\steam\steamapps\common\Escape from Duckov\Duckov_Data\Mods\HideCharacter\HideCharacter.deps.json
 D:\steam\steamapps\common\Escape from Duckov\Duckov_Data\Mods\HideCharacter\HideCharacter.dll
 D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Release\HideCharacter.csproj.AssemblyReference.cache
 D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Release\HideCharacter.GeneratedMSBuildEditorConfig.editorconfig
@@ -6,5 +5,10 @@ D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Release\HideCharacter.Assembly
 D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Release\HideCharacter.AssemblyInfo.cs
 D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Release\HideCharacter.csproj.CoreCompileInputs.cache
 D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Release\HideCharacter.dll
-D:\steam\steamapps\common\Escape from Duckov\Duckov_Data\Mods\HideCharacter\HideCharacter.pdb
 D:\vs_project\ThirdPersonCamera\HideCharacter\obj\Release\HideCharacter.pdb
+D:\vs_project\DuckovMods\HideCharacter\obj\Release\HideCharacter.csproj.AssemblyReference.cache
+D:\vs_project\DuckovMods\HideCharacter\obj\Release\HideCharacter.GeneratedMSBuildEditorConfig.editorconfig
+D:\vs_project\DuckovMods\HideCharacter\obj\Release\HideCharacter.AssemblyInfoInputs.cache
+D:\vs_project\DuckovMods\HideCharacter\obj\Release\HideCharacter.AssemblyInfo.cs
+D:\vs_project\DuckovMods\HideCharacter\obj\Release\HideCharacter.csproj.CoreCompileInputs.cache
+D:\vs_project\DuckovMods\HideCharacter\obj\Release\HideCharacter.dll

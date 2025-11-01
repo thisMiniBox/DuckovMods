@@ -152,7 +152,7 @@ namespace HideCharacter
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.F5))
+            if (Input.GetKeyDown(hideList?.hotkey ?? KeyCode.F5))
             {
                 hide = !hide;
                 SetCharacterHide(hide);

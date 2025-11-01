@@ -1,11 +1,12 @@
 {
   "runtimeTarget": {
-    "name": ".NETCoreApp,Version=v9.0",
+    "name": ".NETStandard,Version=v2.1/",
     "signature": ""
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v9.0": {
+    ".NETStandard,Version=v2.1": {},
+    ".NETStandard,Version=v2.1/": {
       "HideCharacter/1.0.0": {
         "dependencies": {
           "Lib.Harmony": "2.4.1",
@@ -17,24 +18,23 @@
       },
       "Lib.Harmony/2.4.1": {
         "dependencies": {
-          "System.Text.Json": "9.0.1"
-        },
-        "runtime": {
-          "lib/net9.0/0Harmony.dll": {
-            "assemblyVersion": "2.4.1.0",
-            "fileVersion": "2.4.1.0"
-          }
+          "Lib.Harmony.Ref": "2.4.1"
+        }
+      },
+      "Lib.Harmony.Ref/2.4.1": {
+        "dependencies": {
+          "System.Reflection.Emit": "4.7.0"
         }
       },
       "Newtonsoft.Json/13.0.4": {
         "runtime": {
-          "lib/net6.0/Newtonsoft.Json.dll": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
             "assemblyVersion": "13.0.0.0",
             "fileVersion": "13.0.4.30916"
           }
         }
       },
-      "System.Text.Json/9.0.1": {}
+      "System.Reflection.Emit/4.7.0": {}
     }
   },
   "libraries": {
@@ -50,6 +50,13 @@
       "path": "lib.harmony/2.4.1",
       "hashPath": "lib.harmony.2.4.1.nupkg.sha512"
     },
+    "Lib.Harmony.Ref/2.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+u1y2Qd6OlSUQ8JtrsrSo3adnAsrXMJ2YPYtbW+FAmdPI5yw34M9VX4bKl8ZwRuUzaGzZIz+oGMbn/yS4fWtZw==",
+      "path": "lib.harmony.ref/2.4.1",
+      "hashPath": "lib.harmony.ref.2.4.1.nupkg.sha512"
+    },
     "Newtonsoft.Json/13.0.4": {
       "type": "package",
       "serviceable": true,
@@ -57,12 +64,12 @@
       "path": "newtonsoft.json/13.0.4",
       "hashPath": "newtonsoft.json.13.0.4.nupkg.sha512"
     },
-    "System.Text.Json/9.0.1": {
+    "System.Reflection.Emit/4.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-eqWHDZqYPv1PvuvoIIx5pF74plL3iEOZOl/0kQP+Y0TEbtgNnM2W6k8h8EPYs+LTJZsXuWa92n5W5sHTWvE3VA==",
-      "path": "system.text.json/9.0.1",
-      "hashPath": "system.text.json.9.0.1.nupkg.sha512"
+      "sha512": "sha512-VR4kk8XLKebQ4MZuKuIni/7oh+QGFmZW3qORd1GvBq/8026OpW501SzT/oypwiQl4TvT8ErnReh/NzY9u+C6wQ==",
+      "path": "system.reflection.emit/4.7.0",
+      "hashPath": "system.reflection.emit.4.7.0.nupkg.sha512"
     }
   }
 }

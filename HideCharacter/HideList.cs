@@ -1,8 +1,11 @@
+using UnityEngine;
+
 namespace HideCharacter
 {
-
     public class HideList
     {
+        public KeyCode hotkey = KeyCode.F5;
+        
         public bool hideTail = true;
         public bool hideEyes = true;
         public bool hideEyebrow = true;

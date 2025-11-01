@@ -5,14 +5,20 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <Authors>折纸的小箱子</Authors>
-        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.1</AssemblyVersion>
         <DuckovPath>D:\steam\steamapps\common\Escape from Duckov</DuckovPath>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
         <ImplicitUsings>disable</ImplicitUsings>
+        <Version>1.0.1</Version>
+        <Title>隐藏角色</Title>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <OutputPath>D:\steam\steamapps\common\Escape from Duckov\Duckov_Data\Mods\HideCharacter</OutputPath>
+        <!-- 禁用生成 deps.json 文件 -->
+        <GenerateDependencyFile>false</GenerateDependencyFile>
+        <!-- 禁用生成 .pdb 调试符号文件 -->
+        <DebugType>none</DebugType>
     </PropertyGroup>
 
     <ItemGroup>
