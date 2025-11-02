@@ -15,9 +15,12 @@
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <OutputPath>D:\steam\steamapps\common\Escape from Duckov\Duckov_Data\Mods\HideCharacter</OutputPath>
-        <!-- 禁用生成 deps.json 文件 -->
         <GenerateDependencyFile>false</GenerateDependencyFile>
-        <!-- 禁用生成 .pdb 调试符号文件 -->
+        <DebugType>none</DebugType>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <OutputPath>D:\steam\steamapps\common\Escape from Duckov\Duckov_Data\Mods\HideCharacter</OutputPath>
+        <GenerateDependencyFile>false</GenerateDependencyFile>
         <DebugType>none</DebugType>
     </PropertyGroup>
 

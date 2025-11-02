@@ -10,7 +10,8 @@ namespace HideCharacter
             var manage = ModBehaviour.hideHideCharacterManager;
             if (manage!=null)
             {
-                manage.SetCharacterHide(manage.hide);
+                if(manage.hide)
+                    manage.SetCharacterHide(manage.hide);
             }
         }
     }

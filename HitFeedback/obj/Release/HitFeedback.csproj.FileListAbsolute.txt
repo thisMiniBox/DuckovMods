@@ -1,0 +1,7 @@
+D:\steam\steamapps\common\Escape from Duckov\Duckov_Data\Mods\HitFeedback\HitFeedback.dll
+D:\vs_project\DuckovMods\HitFeedback\obj\Release\HitFeedback.csproj.AssemblyReference.cache
+D:\vs_project\DuckovMods\HitFeedback\obj\Release\HitFeedback.GeneratedMSBuildEditorConfig.editorconfig
+D:\vs_project\DuckovMods\HitFeedback\obj\Release\HitFeedback.AssemblyInfoInputs.cache
+D:\vs_project\DuckovMods\HitFeedback\obj\Release\HitFeedback.AssemblyInfo.cs
+D:\vs_project\DuckovMods\HitFeedback\obj\Release\HitFeedback.csproj.CoreCompileInputs.cache
+D:\vs_project\DuckovMods\HitFeedback\obj\Release\HitFeedback.dll

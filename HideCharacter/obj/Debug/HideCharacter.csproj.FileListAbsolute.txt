@@ -18,6 +18,5 @@ D:\vs_project\DuckovMods\HideCharacter\obj\Debug\HideCharacter.GeneratedMSBuildE
 D:\vs_project\DuckovMods\HideCharacter\obj\Debug\HideCharacter.AssemblyInfoInputs.cache
 D:\vs_project\DuckovMods\HideCharacter\obj\Debug\HideCharacter.AssemblyInfo.cs
 D:\vs_project\DuckovMods\HideCharacter\obj\Debug\HideCharacter.csproj.CoreCompileInputs.cache
-D:\vs_project\DuckovMods\HideCharacter\obj\Debug\HideCharacter.sourcelink.json
 D:\vs_project\DuckovMods\HideCharacter\obj\Debug\HideCharacter.dll
-D:\vs_project\DuckovMods\HideCharacter\obj\Debug\HideCharacter.pdb
+D:\steam\steamapps\common\Escape from Duckov\Duckov_Data\Mods\HideCharacter\HideCharacter.dll

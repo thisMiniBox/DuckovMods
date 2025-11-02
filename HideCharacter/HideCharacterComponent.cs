@@ -15,8 +15,6 @@ namespace HideCharacter
         public HideList? hideList = new HideList();
         public bool hide { get; private set; } = false;
         private List<Renderer> rendererList = new  List<Renderer>();
-        private bool needRefresh = true;
-
         private GameObject?
             bodyPartObject,
             tail,
@@ -38,8 +36,8 @@ namespace HideCharacter
 
         private void OnEnable()
         {
-            SceneManager.sceneLoaded += OnSceneLoaded;
-            
+            LevelManager.OnLevelInitialized+=OnSceneLoaded;
+            SceneManager.sceneUnloaded += OnSceneUnloaded;
             
             var dllDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             var configFilePath = Path.Combine(dllDirectory, "config.json");
@@ -84,25 +82,56 @@ namespace HideCharacter
 
         private void OnDisable()
         {
-            SceneManager.sceneLoaded -= OnSceneLoaded;
+            LevelManager.OnLevelInitialized-=OnSceneLoaded;
+            SceneManager.sceneUnloaded -= OnSceneUnloaded;
         }
 
-        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        private void OnSceneLoaded()
         {
             rendererList.Clear();
+            hide = false;
+
             var obj = GameObject.Find("ModelRoot");
             if (!obj) return;
             //角色的模型是最先加载的，就直接先查找了，避免找到其他实体的身体
             bodyPartObject = GameObject.Find("Pelvis");
             healthBar = GameObject.Find("HealthBars");
-            needRefresh = true;
             //身体的SkinnedMeshRenderer如果不隐藏会发现身体无法恢复
             foreach (var skinnedMeshRenderer in obj.GetComponentsInChildren<SkinnedMeshRenderer>())
             {
                 rendererList.Add(skinnedMeshRenderer);
             }
+
+            Refresh();
         }
 
+        private void OnSceneUnloaded(Scene scene)
+        {
+            hide = false;
+            SetCharacterHide(false);
+        }
+
+        public void Refresh()
+        {
+            tail = null;
+            eye = null;
+            eyebrow = null;
+            mouth = null;
+            hair = null;
+            armLeft = null;
+            armRight = null;
+            thighLeft = null;
+            thighRight = null;
+            weapon = null;
+            healthBar = null;
+            helmet = null;
+            glasses = null;
+            headTip = null;
+            armor = null;
+            backpack = null;
+            if (bodyPartObject != null)
+                FindChildObjectsRecursively(bodyPartObject.transform);
+        }
         /// <summary>
         /// 查找身体部件，不使用对Meshderer的隐藏是因为测试的时候发现没有正确隐藏，
         /// 可能是测试逻辑错了，就先这样写了
@@ -187,13 +216,6 @@ namespace HideCharacter
         {
             if (hideList != null)
             {
-                //使用懒刷新是因为发现在开始查找的时候会找不到眼睛和眉毛，可能是还没有创建，就改为在切换时刷新了
-                if (needRefresh)
-                {
-                    if (bodyPartObject != null)
-                        FindChildObjectsRecursively(bodyPartObject.transform);
-					needRefresh=false;
-                }
                 tail?.SetActive(!(hide && hideList.hideTail));
                 eye?.SetActive(!(hide && hideList.hideEyes));
                 eyebrow?.SetActive(!(hide && hideList.hideEyebrow));
