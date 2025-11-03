@@ -12,7 +12,7 @@ namespace HideCharacter
 
     public class HideCharacterComponent : MonoBehaviour
     {
-        public HideList? hideList = new HideList();
+
         public bool hide { get; private set; } = false;
         private List<Renderer> rendererList = new  List<Renderer>();
         private GameObject?
@@ -39,45 +39,6 @@ namespace HideCharacter
             LevelManager.OnLevelInitialized+=OnSceneLoaded;
             SceneManager.sceneUnloaded += OnSceneUnloaded;
             
-            var dllDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var configFilePath = Path.Combine(dllDirectory, "config.json");
-            if (File.Exists(configFilePath))
-            {
-                try
-                {
-                    var jsonString = File.ReadAllText(configFilePath);
-                    hideList = JsonConvert.DeserializeObject<HideList>(jsonString);
-                }
-                catch (JsonSerializationException ex) // 捕获 Newtonsoft.Json 特有的异常
-                {
-                    Debug.LogError($"JSON 反序列化错误 (Newtonsoft.Json): {ex.Message}");
-                }
-                catch (IOException ex)
-                {
-                    Debug.LogError($"文件读取错误: {ex.Message}");
-                }
-                catch (Exception ex)
-                {
-                    Debug.LogError($"加载配置文件时发生未知错误: {ex.Message}");
-                }
-            }
-            else
-            {
-                Debug.LogWarning($"配置文件 '{configFilePath}' 不存在。将使用默认设置。");
-                try
-                {
-                    var jsonString = JsonConvert.SerializeObject(hideList, Formatting.Indented);
-                    File.WriteAllText(configFilePath, jsonString);
-                }
-                catch (IOException ex)
-                {
-                    Debug.LogError($"创建配置文件时发生错误: {ex.Message}");
-                }
-                catch (Exception ex)
-                {
-                    Debug.LogError($"创建配置文件时发生未知错误: {ex.Message}");
-                }
-            }
         }
 
         private void OnDisable()
@@ -205,7 +166,7 @@ namespace HideCharacter
 
         private void Update()
         {
-            if (Input.GetKeyDown(hideList?.hotkey ?? KeyCode.F5))
+            if (Input.GetKeyDown(ModBehaviour.hideList?.hotkey ?? KeyCode.F5))
             {
                 hide = !hide;
                 SetCharacterHide(hide);
@@ -214,6 +175,7 @@ namespace HideCharacter
 
         public void SetCharacterHide(bool hide)
         {
+            var hideList = ModBehaviour.hideList;
             if (hideList != null)
             {
                 tail?.SetActive(!(hide && hideList.hideTail));

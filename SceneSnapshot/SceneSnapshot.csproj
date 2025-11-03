@@ -12,7 +12,12 @@
 		<AssemblyVersion>1.0.0</AssemblyVersion>
 	</PropertyGroup>
 
-
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+		<OutputPath>D:\steam\steamapps\common\Escape from Duckov\Duckov_Data\Mods\SceneSnapshot</OutputPath>
+		<GenerateDependencyFile>false</GenerateDependencyFile>
+		<DebugType>none</DebugType>
+	</PropertyGroup>
+	
 	<ItemGroup>
 		<Reference Include="$(DuckovPath)\Duckov_Data\Managed\TeamSoda.*">
 			<Private>False</Private>
