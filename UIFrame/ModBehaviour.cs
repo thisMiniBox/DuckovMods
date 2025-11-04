@@ -1,3 +1,4 @@
+using Duckov.Options.UI;
 using UnityEngine;
 
 namespace UIFrame
@@ -7,6 +8,7 @@ namespace UIFrame
         protected override void OnAfterSetup()
         {
             Debug.Log("OnAfterSetup");
+            
         }
 
         protected override void OnBeforeDeactivate()

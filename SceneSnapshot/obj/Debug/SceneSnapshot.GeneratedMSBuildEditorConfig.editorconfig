@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = SceneSnapshot
-build_property.ProjectDir = d:\vs_project\DuckovMods\SceneSnapshot\
+build_property.ProjectDir = D:\vs_project\DuckovMods\SceneSnapshot\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

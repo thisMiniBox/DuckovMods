@@ -14,13 +14,17 @@ namespace HitFeedback
     public class ModBehaviour:Duckov.Modding.ModBehaviour
     {
         public const string AudioFolderName = "audio";
+        public const string ConfigFileName = "config.ini";
         public string audioFolderPath;
+        public string configFilePath;
 
-        public List<string> audioFilePath = new List<string>();
+        public Dictionary<string,float> audioFilePath = new Dictionary<string,float>();
         
         public Health health;
         
         public Config config=new Config();
+        
+        public float totalWeight;
 
         private void Update()
         {
@@ -34,12 +38,46 @@ namespace HitFeedback
         {
             LevelManager.OnLevelInitialized += OnSceneLoaded;
             audioFolderPath=Path.Combine(info.path,AudioFolderName);
+            configFilePath=Path.Combine(info.path, ConfigFileName);
             FindWavFiles();
+            config.LoadConfig(configFilePath);
+            ApplyConfig();
+            foreach (var f in audioFilePath)
+            {
+                totalWeight+=f.Value;
+            }
         }
         protected override void OnBeforeDeactivate()
         {
-            
             LevelManager.OnLevelInitialized -= OnSceneLoaded;
+            SaveConfig();
+        }
+
+        private void OnDestroy()
+        {
+            SaveConfig();
+        }
+
+        private void ApplyConfig()
+        {
+            foreach (var f in config.probability)
+            {
+                if (audioFilePath.ContainsKey(f.Key))
+                {
+                    audioFilePath[f.Key] = f.Value;
+                }
+            }
+        }
+
+        private void SaveConfig()
+        {
+            config.probability.Clear();
+            foreach (var f in audioFilePath)
+            {
+                config.probability.Add(f.Key, f.Value);
+            }
+
+            config.SaveConfig(configFilePath);
         }
         private void FindWavFiles()
         {
@@ -55,7 +93,7 @@ namespace HitFeedback
                 {
                     foreach (string filePath in files)
                     {
-                        audioFilePath.Add(filePath);
+                        audioFilePath.Add(Path.GetFileName(filePath), 1);
                     }
                 }
             }
@@ -101,16 +139,21 @@ namespace HitFeedback
         {
             if (audioFilePath.Count > 0)
             {
-                var randomIndex = Random.Range(0, audioFilePath.Count);
-                var filePath = audioFilePath[randomIndex];
-                AudioManager.PostCustomSFX(filePath);
+                var randomIndex = Random.Range(0, totalWeight);
+                foreach (var f in audioFilePath)
+                {
+                    randomIndex -= f.Value;
+                    if (randomIndex <= 0)
+                    {
+                        AudioManager.PostCustomSFX(Path.Combine(audioFolderPath, f.Key));
+                        return;
+                    }
+                }
             }
             else
             {
                 Debug.LogWarning("Mod Feedback: No audio clips loaded to play.");
             }
         }
-        
-        
     }
 }
