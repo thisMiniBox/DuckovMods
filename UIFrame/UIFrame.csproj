@@ -18,5 +18,8 @@
         <Reference Include="$(DuckovPath)\Duckov_Data\Managed\Unity*" Private="False" />
         <Reference Include="$(DuckovPath)\Duckov_Data\Managed\FMODUnity.dll" Private="False" />
     </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Lib.Harmony" Version="2.4.1" />
+    </ItemGroup>
 
 </Project>

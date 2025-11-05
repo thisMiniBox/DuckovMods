@@ -1,0 +1,7 @@
+D:\steam\steamapps\common\Escape from Duckov\Duckov_Data\Mods\Theme\Theme.dll
+D:\vs_project\DuckovMods\Theme\obj\Release\Theme.csproj.AssemblyReference.cache
+D:\vs_project\DuckovMods\Theme\obj\Release\Theme.GeneratedMSBuildEditorConfig.editorconfig
+D:\vs_project\DuckovMods\Theme\obj\Release\Theme.AssemblyInfoInputs.cache
+D:\vs_project\DuckovMods\Theme\obj\Release\Theme.AssemblyInfo.cs
+D:\vs_project\DuckovMods\Theme\obj\Release\Theme.csproj.CoreCompileInputs.cache
+D:\vs_project\DuckovMods\Theme\obj\Release\Theme.dll

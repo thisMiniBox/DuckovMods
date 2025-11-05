@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Theme")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0206a83f56b5a794fe2f173b4a047cc4f0d4cd90")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d69efbc3f80a5422cef0884e02fb27adf20b467")]
 [assembly: System.Reflection.AssemblyProductAttribute("Theme")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Theme")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
