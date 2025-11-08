@@ -17,6 +17,9 @@
         <Reference Include="$(DuckovPath)\Duckov_Data\Managed\ItemStatsSystem.dll" Private="False" />
         <Reference Include="$(DuckovPath)\Duckov_Data\Managed\Unity*" Private="False" />
         <Reference Include="$(DuckovPath)\Duckov_Data\Managed\FMODUnity.dll" Private="False" />
+        <Reference Include="SodaLocalization">
+          <HintPath>..\..\..\steam\steamapps\common\Escape from Duckov\Duckov_Data\Managed\SodaLocalization.dll</HintPath>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="Lib.Harmony" Version="2.4.1" />

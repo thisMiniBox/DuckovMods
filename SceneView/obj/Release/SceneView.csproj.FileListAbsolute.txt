@@ -1,0 +1,7 @@
+D:\steam\steamapps\common\Escape from Duckov\Duckov_Data\Mods\SceneView\SceneView.dll
+D:\vs_project\DuckovMods\SceneView\obj\Release\SceneView.csproj.AssemblyReference.cache
+D:\vs_project\DuckovMods\SceneView\obj\Release\SceneView.GeneratedMSBuildEditorConfig.editorconfig
+D:\vs_project\DuckovMods\SceneView\obj\Release\SceneView.AssemblyInfoInputs.cache
+D:\vs_project\DuckovMods\SceneView\obj\Release\SceneView.AssemblyInfo.cs
+D:\vs_project\DuckovMods\SceneView\obj\Release\SceneView.csproj.CoreCompileInputs.cache
+D:\vs_project\DuckovMods\SceneView\obj\Release\SceneView.dll

@@ -1,66 +1,76 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace UIFrame.Utilities
 {
     public class GameObjectTool
     {
         /// <summary>
-        /// 在指定父对象下，查找第一个匹配名称的子GameObject（可以是孙子、曾孙等）
+        /// 根据Unity对象路径查找场景中的GameObject，包括隐藏（非激活）对象。
+        /// 路径示例："RootObject/ChildObject/GrandchildObject"
         /// </summary>
-        /// <param name="parent">要查找的父Transform。</param>
-        /// <param name="name">要查找的GameObject的名称。</param>
+        /// <param name="path">要查找的GameObject的层级路径。</param>
         /// <returns>找到的GameObject，如果未找到则返回null。</returns>
-        public static GameObject? FindChildByName(Transform parent, string name)
+        public static GameObject FindObjectByPath(string path)
         {
-            // 查找父对象本身是否就是目标对象
-            if (parent.name.Equals(name))
+            if (string.IsNullOrWhiteSpace(path))
             {
-                return parent.gameObject;
+                Debug.LogWarning("FindObjectByPath: Provided path is null, empty, or whitespace. Returning null.");
+                return null;
             }
-            // 遍历所有直接子对象
-            foreach (Transform child in parent)
+            
+            string[] pathParts = path.Split(new char[] { '/' }, System.StringSplitOptions.RemoveEmptyEntries);
+            // 如果路径分割后没有有效部分（例如："/" 或空字符串），则直接返回null
+            if (pathParts.Length == 0)
             {
-                // 检查当前子对象是否是目标对象
-                if (child.name.Equals(name))
+                Debug.LogWarning(
+                    $"FindObjectByPath: Path '{path}' resulted in no valid segments after splitting. Returning null.");
+                return null;
+            }
+
+            GameObject currentObject = null;
+            // GetRootGameObjects() 会返回场景中所有根级别的GameObject，无论它们是否激活。
+            Scene activeScene = SceneManager.GetActiveScene();
+            GameObject[] rootGameObjects = activeScene.GetRootGameObjects();
+            foreach (GameObject rootObj in rootGameObjects)
+            {
+                if (rootObj.name == pathParts[0])
                 {
-                    return child.gameObject;
+                    currentObject = rootObj;
+                    break;
                 }
-                // 递归查找子对象的子对象
-                var found = FindChildByName(child, name);
-                if (found)
+            }
+
+            // 如果根对象未找到，则路径无效
+            if (currentObject == null)
+            {
+                Debug.LogWarning($"FindObjectByPath: Root object '{pathParts[0]}' not found in the active scene. Returning null.");
+                return null;
+            }
+            
+            for (int i = 1; i < pathParts.Length; i++)
+            {
+                if (currentObject == null)
                 {
-                    return found;
+                    Debug.LogError(
+                        $"FindObjectByPath: Unexpected null currentObject while traversing path segment '{pathParts[i]}'. This indicates an internal logic error.");
+                    return null;
                 }
+
+                // transform.Find() 能够查找包括非激活状态的子对象
+                Transform childTransform = currentObject.transform.Find(pathParts[i]);
+                if (childTransform == null)
+                {
+                    Debug.LogWarning($"FindObjectByPath: Child object '{pathParts[i]}' not found under '{currentObject.name}'. Path invalid. Returning null.");
+                    return null;
+                }
+
+                currentObject = childTransform.gameObject;
             }
-            return null;
+            
+            return currentObject;
         }
-        /// <summary>
-        /// 在指定父对象下，查找所有匹配名称的子GameObject（可以是孙子、曾孙等），不区分大小写。
-        /// </summary>
-        /// <param name="parent">要查找的父Transform。</param>
-        /// <param name="name">要查找的GameObject的名称。</param>
-        /// <returns>所有找到的GameObject列表。</returns>
-        public static List<GameObject> FindChildrenByName(Transform parent, string name)
-        {
-            var foundObjects = new List<GameObject>();
-            FindChildrenByNameRecursive(parent, name, foundObjects);
-            return foundObjects;
-        }
-        private static void FindChildrenByNameRecursive(Transform currentTransform, string name, List<GameObject> foundObjects)
-        {
-            // 检查当前对象是否是目标对象
-            if (currentTransform.name.Equals(name))
-            {
-                foundObjects.Add(currentTransform.gameObject);
-            }
-            // 遍历所有子对象并递归查找
-            foreach (Transform child in currentTransform)
-            {
-                FindChildrenByNameRecursive(child, name, foundObjects);
-            }
-        }
-        
-        
     }
 }

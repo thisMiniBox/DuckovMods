@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIFrame", "UIFrame\UIFrame.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theme", "Theme\Theme.csproj", "{7CCF2612-AF15-42F0-B472-8C8F8CAB9B20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SceneView", "SceneView\SceneView.csproj", "{87AA16B9-C7F9-456E-8F57-CE05F393D91F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{7CCF2612-AF15-42F0-B472-8C8F8CAB9B20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CCF2612-AF15-42F0-B472-8C8F8CAB9B20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CCF2612-AF15-42F0-B472-8C8F8CAB9B20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87AA16B9-C7F9-456E-8F57-CE05F393D91F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87AA16B9-C7F9-456E-8F57-CE05F393D91F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87AA16B9-C7F9-456E-8F57-CE05F393D91F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87AA16B9-C7F9-456E-8F57-CE05F393D91F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

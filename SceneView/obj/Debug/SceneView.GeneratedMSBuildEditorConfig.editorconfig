@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = SceneView
+build_property.ProjectDir = D:\vs_project\DuckovMods\SceneView\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

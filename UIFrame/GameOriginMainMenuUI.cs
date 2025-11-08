@@ -10,63 +10,60 @@ namespace UIFrame
 {
     public class GameOriginMainMenuUI
     {
-        public GameObject mainMenuContainer;
-        public Image? title;
-        public TMP_Text[]? allTexts;
-        
-        public Sprite titleSprite;
-        
-        public bool linkMainMenu=false;
+        // public SpriteRenderer? title;
+        // public TMP_Text[]? allTexts;
+        public static Sprite? titleSprite=null;
 
-        public void Initialize()
-        {
-            SceneLoader.onAfterSceneInitialize += OnAfterSceneInitialize;
-        }
 
-        public void Cleanup()
-        {
-            SceneLoader.onAfterSceneInitialize -= OnAfterSceneInitialize;
-        }
+        // public void Initialize()
+        // {
+        //     SceneManager.sceneLoaded += OnSceneLoaded;
+        //     // SceneLoader.onAfterSceneInitialize += OnAfterSceneInitialize;
+        //     LinkMainMenuObj();
+        // }
+        //
+        // public void Cleanup()
+        // {
+        //     SceneManager.sceneLoaded -= OnSceneLoaded;
+        //     // SceneLoader.onAfterSceneInitialize -= OnAfterSceneInitialize;
+        // }
+        //
+        // private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        // {
+        //     Debug.Log("Loading game origin main menu...");
+        //     LinkMainMenuObj();
+        // }
+        // // private void OnAfterSceneInitialize(SceneLoadingContext sceneLoadingContext)
+        // // {
+        // //     
+        // // }
+        //
+        // public void LinkMainMenuObj()
+        // {
+        //     var logoObj=GameObjectTool.FindObjectByPath("TimelineContent/LOGO/Logo");
+        //     title = logoObj?.GetComponent<SpriteRenderer>();
+        // }
 
-        private void OnAfterSceneInitialize(SceneLoadingContext sceneLoadingContext)
-        {
-            linkMainMenu = false;
-            LinkMainMenuObj();
-        }
-        
-        public void LinkMainMenuObj()
-        {
-            mainMenuContainer = GameObject.Find("MainMenuContainer");
-            if(!mainMenuContainer)
-            {
-                Debug.LogWarning("Could not find Main Menu Container");
-                return;
-            }
-            Debug.Log("Main Menu Container initialized");
-            allTexts = mainMenuContainer.GetComponentsInChildren<TMP_Text>();
-            title = GameObjectTool.FindChildByName(mainMenuContainer.transform, "MainTitle")?.GetComponent<Image>();
-            linkMainMenu = true;
-            
-            
-        }
-
-        public bool SetFont(TMP_FontAsset font)
-        {
-            if(allTexts == null || allTexts.Length == 0)
-                return false;
-            foreach (var text in allTexts)
-            {
-                text.font = font;
-            }
-            return true;
-        }
+        // public bool SetFont(TMP_FontAsset font)
+        // {
+        //     if(allTexts == null || allTexts.Length == 0)
+        //         return false;
+        //     foreach (var text in allTexts)
+        //     {
+        //         text.font = font;
+        //     }
+        //     return true;
+        // }
 
         public bool SetTitle(Sprite texture)
         {
-            titleSprite=texture;
-            if(title==null)
-                return false;
-            title.sprite = texture;
+            // Debug.Log("Setting title...");
+            titleSprite = texture;
+            // if(title==null)
+            // {
+            //     return false;
+            // }
+            // title.sprite = texture;
             return true;
         }
     }

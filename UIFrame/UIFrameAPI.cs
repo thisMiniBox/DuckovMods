@@ -38,13 +38,14 @@ namespace UIFrame
             {
                 return false;
             }
+            
             return _apiComponent&&_apiComponent.SetTitleImage(texture);
         }
         /// <summary>
-        /// 设置标题图片（游戏中的标题是图片）
+        /// 设置标题图片（游戏中的启动界面Logo）
         /// </summary>
         /// <param name="sprite">贴图</param>
-        /// <returns></returns>
+        /// <returns>返回false表示函数调用时设置失败，之后会自动再次尝试设置</returns>
         public static bool SetGameTitle(Sprite sprite)
         {
             return _apiComponent&&_apiComponent.SetTitleImage(sprite);

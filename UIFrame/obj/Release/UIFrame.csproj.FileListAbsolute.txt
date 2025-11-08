@@ -5,3 +5,4 @@ D:\vs_project\DuckovMods\UIFrame\obj\Release\UIFrame.AssemblyInfoInputs.cache
 D:\vs_project\DuckovMods\UIFrame\obj\Release\UIFrame.AssemblyInfo.cs
 D:\vs_project\DuckovMods\UIFrame\obj\Release\UIFrame.csproj.CoreCompileInputs.cache
 D:\vs_project\DuckovMods\UIFrame\obj\Release\UIFrame.dll
+D:\vs_project\DuckovMods\UIFrame\obj\Release\UIFrame.csproj.Up2Date

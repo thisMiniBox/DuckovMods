@@ -5,6 +5,7 @@ using Duckov.UI;
 using Duckov.UI.Animations;
 using Duckov.Utilities;
 using HarmonyLib;
+using SodaCraft.Localizations;
 using UnityEngine;
 
 namespace UIFrame
@@ -16,7 +17,11 @@ namespace UIFrame
         private GameObject? workerObject;
         
         private Harmony? harmony;
-        
+
+        private void Start()
+        {
+        }
+
         protected override void OnAfterSetup()
         {
             CreateAPIObject();
@@ -31,6 +36,7 @@ namespace UIFrame
 
         protected override void OnBeforeDeactivate()
         {
+            
             ClearAPIObject();
             harmony?.UnpatchAll(MOD_ID);
             harmony = null;

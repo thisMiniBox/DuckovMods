@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("折纸的小箱子")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d69efbc3f80a5422cef0884e02fb27adf20b467")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+786025f720c05ae486c8c66d3a6114633ccd0dbf")]
 [assembly: System.Reflection.AssemblyProductAttribute("SceneSnapshot")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SceneSnapshot")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0")]
